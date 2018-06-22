@@ -1,11 +1,31 @@
-auto: true
+title: "Blog Title"
+author: "Blog Author"
+description: "Really cool blog about ... something"
+more: "read more »"
+url: "https://niklasbuschmann.github.io/"
+baseurl: "/contrast"
+paginate: 2
+permalink: pretty
+excerpt_separator: "\n\n\n" # two blank lines
 
-#markdown: rdiscount
-highlighter: 'pygments'
-#paginate: 8
-permalink: /:title
+style:
+  minimalist: false
+  dark: false
 
-title: Hyper Hamster
-url: http://mukosame.github.io
-feed: /atom.xml
-author_info: <a href="http://mukosame.github.io/">Mukosame</a>
+navigation:
+  - index.html
+  - archive.html
+  - about.md
+
+comments:
+  disqus: "disqus-contrast"
+#  isso: "comments.mysite.org"
+
+links: # see http://fontawesome.io/icons/#brand for all possible icons
+  - twitter: "https://twitter.com/twitter/"
+  - github: "https://github.com/niklasbuschmann/contrast"
+  - envelope: "mailto:niklas.buschmann@posteo.de"
+
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+sass: {style: expanded}
+plugins: [jekyll-feed, jekyll-paginate]
