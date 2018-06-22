@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Blog · Tanky Woo"
+---
+
+
+<div id="home">
+  <span class="index_recent">微信公众号文章：</span>
+  <ul class="posts">
+    {% for post in site.posts %}
+      {% if post.categories contains "公众号"%}
+      <li><span class="post_date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

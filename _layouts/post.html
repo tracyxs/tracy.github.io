@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div id="pagetitle">
+  <div class="page_title"><h1>{{ page.title }}</h1></div>
+  <div class="page_meta"><small><span class="meta">
+    {{ page.date | date_to_string }}
+    {% if page.categories == blank %}
+      | {{ page.categories }}
+    {% endif %}</span></small>
+  </div>
+</div>
+
+<div class="post">
+{{ content }}
+</div>
+
+<!--
+<script data-isso="/isso/"
+        data-isso-vote="false"
+        data-vote-levels=""
+        data-isso-require-author="true"
+        data-isso-require-email="true"
+        data-isso-avatar="true"
+        src="/isso/js/embed.min.js"></script>
+
+<section id="isso-thread"></section>
+-->

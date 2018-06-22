@@ -1,19 +1,49 @@
----
-layout: blank
----
-<main>
-  <article>
-    <header>
-      <h1><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1>
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    </header>
-{{ content }}
-    {% if site.comments.isso and page.comments %}
-    <hr><div id="isso-thread"></div>
-    {% endif %}
-    {% if site.comments.disqus and page.comments %}
-    <hr><div id="disqus_thread"></div>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    {% endif %}
-  </article>
-</main>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ site.description }}"/>
+        <meta name="viewport" content="width=device-width">
+        <link href="/favicon.png" rel="icon">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Custom JS -->
+        <script type="text/javascript" src="{{ site.baseurl }}/js/is.min.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/colorful.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/second.css">
+    </head>
+    <body>
+
+          <div class="header">
+            <span class="title"><a href="/">{{ site.name }}</a></span>
+            &#47;&nbsp;<a class="extra" href="/about.html">ABOUT</a>
+            &#47;&nbsp;<a class="extra" href="/feed.xml">RSS</a>
+          </div>
+
+        <div class="site">
+
+          {{ content }}
+
+        </div>
+
+        <div class="footer">
+          <p><a href="http://www.miitbeian.gov.cn/">京ICP备16016622号</a></p>
+        </div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f8eefe3f13b327ada7a7406d2af3232' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+    </body>
+</html>
