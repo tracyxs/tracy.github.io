@@ -1,6 +1,6 @@
-name: "Blog·Tanky Woo"
-description: "Tanky Woo's Blog, focus on Python, Linux, Gentoo, Mac OS, Vim, Open Source and so on."
-url: "http://blog.tankywoo.com"
+name: "Blog·Tracy"
+description: "常与同好争高下"
+url: "http://tracyxs.github.io"
 markdown: redcarpet
 highlighter: pygments
 exclude: ["fabfile.py*", "*.bak"]
