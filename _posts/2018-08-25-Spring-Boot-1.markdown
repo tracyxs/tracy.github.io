@@ -11,7 +11,5 @@ comments: true
   
   Spring Boot 的默认启动引导类是Application.java。在Application的头部加上@SpringBootApplication注解，即开启组件扫描和自动配置。@SpringBootApplication注解是以下三个注解的组合：@Configuration，@ConponentScan，@EnableAutoConfiguration。
   
-  其中，@Configuratio表示这个启动类是配置类，即配置到Spring容器中，@ConponentScan表示开启自动扫描，即在 spring 中启动组件扫描，默认扫描与配置类相同的包，@EnableAutoConfiguration表示自动装配，将所有符合自动配置条件的bean定义加载到IoC容器中。Application.java的main方法中，SpringApplication.run() 启动引导应用程序。
+  其中，@Configuration表示这个启动类是配置类，即配置到Spring容器中，@ConponentScan表示开启自动扫描，即在 spring 中启动组件扫描，默认扫描与配置类相同的包，@EnableAutoConfiguration表示自动装配，将所有符合自动配置条件的bean定义加载到IoC容器中。Application.java的main方法中，SpringApplication.run() 启动引导应用程序。
   
-  那整个Spring Boot Web项目的启动过程是怎么样的呢？下节说明。
-
